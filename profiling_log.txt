@@ -1,0 +1,50 @@
+[
+    (
+        "raytracer - execute",
+        Record {
+            calls: 230,
+            total_duration: 1.5375709s,
+            avg_duration: 6.68509ms,
+        },
+    ),
+    (
+        "raytracer - commands",
+        Record {
+            calls: 230,
+            total_duration: 1.4642103s,
+            avg_duration: 6.366131ms,
+        },
+    ),
+    (
+        "blood renderer - draw",
+        Record {
+            calls: 230,
+            total_duration: 43.2557ms,
+            avg_duration: 188.068µs,
+        },
+    ),
+    (
+        "simulation - tick",
+        Record {
+            calls: 299,
+            total_duration: 7.4523ms,
+            avg_duration: 24.924µs,
+        },
+    ),
+    (
+        "PERF SYNC",
+        Record {
+            calls: 2,
+            total_duration: 567.6µs,
+            avg_duration: 283.8µs,
+        },
+    ),
+    (
+        "raytracer - world gen",
+        Record {
+            calls: 1,
+            total_duration: 101.4µs,
+            avg_duration: 101.4µs,
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[package]
+name = "core_simulation"
+version = "0.1.0"
+authors = ["Eric Olson <eric.rob.olson@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+core_data_structures = {path = "../core_data_structures"}
+core_timing = {path = "../core_timing"}
+core_renderer = {path = "../core_renderer"}

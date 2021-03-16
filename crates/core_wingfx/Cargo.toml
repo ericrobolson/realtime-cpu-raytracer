@@ -1,0 +1,18 @@
+[package]
+name = "core_wingfx"
+version = "0.1.0"
+authors = ["Eric Olson <eric.rob.olson@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# OpenGL
+glutin = "0.26"
+glow = "0.8.1"
+
+core_data_structures = {path = "../core_data_structures"}
+core_img = {path = "../core_img"}
+core_simulation = {path = "../core_simulation"}
+core_renderer = {path = "../core_renderer"}
+core_conversions = {path = "../core_conversions"}
