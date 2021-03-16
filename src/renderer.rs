@@ -12,8 +12,8 @@ pub fn build<'a>(
     save_renders: bool,
     font: &'static str,
     font_size: u32,
-) -> BloodRenderer<'a> {
-    BloodRenderer::new(
+) -> RtcrRenderer<'a> {
+    RtcrRenderer::new(
         render_width,
         render_height,
         render_scalar,
@@ -53,7 +53,7 @@ impl Command {
     }
 }
 
-pub struct BloodRenderer<'a> {
+pub struct RtcrRenderer<'a> {
     sender: Sender<Command>,
     receiver: Receiver<Command>,
     commands: Vec<Command>,
@@ -65,7 +65,7 @@ pub struct BloodRenderer<'a> {
     render_size: Size,
     characters: HashMap<char, (TextureId, CharacterRecord)>,
 }
-impl<'a> BloodRenderer<'a> {
+impl<'a> RtcrRenderer<'a> {
     fn new(
         render_width: u32,
         render_height: u32,

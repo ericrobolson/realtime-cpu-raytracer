@@ -10,7 +10,10 @@ use core_simulation::{Simulation, SimulationExecutor};
 use core_time::{duration_from_hz, Duration, Timer};
 use core_wingfx::WinGfx;
 
-use renderer::{BloodRenderer, Size};
+use renderer::{RtcrRenderer, Size};
+
+const MAX_RENDER_SCALAR: u32 = 120;
+const MIN_RENDER_SCALAR: u32 = 12;
 
 const PERF_DUMP_OCCURENCE: u64 = 100;
 
@@ -21,8 +24,7 @@ fn main() {
 
     let window_width = 1920;
     let window_height = 1080;
-    let initial_render_scalar = 120; // This gets a 16:9 render ratio
-    let initial_render_scalar = 120;
+    let initial_render_scalar = 120; // This gets a 16x9 character render on a 16:9 render ratio
 
     let cfg = Cfg {
         initial_render_scalar,
@@ -47,7 +49,7 @@ struct Sim<'a> {
     window_size: Size,
     frame: u64,
     render_scalar: u32,
-    renderer: BloodRenderer<'a>,
+    renderer: RtcrRenderer<'a>,
     raytracer: Raytracer,
 }
 
@@ -64,7 +66,7 @@ impl<'a> Simulation<Cfg, Msg> for Sim<'a> {
         // Rest of program
         let aa_samples = 0;
         let debug_normals = false;
-        let post_process_aa = false;
+        let post_process_aa = true;
         let save_renders = false;
         let primary_ray_strength = 5;
 
@@ -194,6 +196,3 @@ impl<'a> Simulation<Cfg, Msg> for Sim<'a> {
         }
     }
 }
-
-const MAX_RENDER_SCALAR: u32 = 120;
-const MIN_RENDER_SCALAR: u32 = 12;
