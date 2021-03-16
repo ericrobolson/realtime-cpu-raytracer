@@ -1,4 +1,7 @@
-CPU based 3d raycasting engine
+CPU based 3d ray tracing engine
+* Not production ready in any way. Simply a fun experiment to get some OpenGL sprites drawing.
+* Code is loosely organized by `crates` containing engine code and `src` containing application specific code.
+* Various settings can be changed in `main.rs`, though it is not very ergonomic.
 
 Features
 * Dynamic resolution scaling
